@@ -5,9 +5,7 @@ export const FloatingLogos = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Create initial floating items
     const initialItems = techNames.flatMap((name, index) => {
-      // Create 2-3 instances of each logo for more density
       const count = Math.floor(Math.random() * 2) + 2;
       return Array.from({ length: count }, (_, i) => ({
         id: index * 10 + i,
@@ -25,48 +23,49 @@ export const FloatingLogos = () => {
 
     setItems(initialItems);
 
-    // Animation loop
-    const animate = () => {
-      setItems((prevItems) =>
-        prevItems.map((item) => {
-          let newX = item.x + item.speedX;
-          let newY = item.y + item.speedY;
-          let newSpeedX = item.speedX;
-          let newSpeedY = item.speedY;
+    const interval = setInterval(() => {
+      setItems((prev) =>
+        prev.map((item) => {
+          let x = item.x + item.speedX;
+          let y = item.y + item.speedY;
+          let sx = item.speedX;
+          let sy = item.speedY;
 
-          // Bounce off edges
-          if (newX < -5 || newX > 105) {
-            newSpeedX = -newSpeedX;
-            newX = Math.max(-5, Math.min(105, newX));
-          }
-          if (newY < -5 || newY > 105) {
-            newSpeedY = -newSpeedY;
-            newY = Math.max(-5, Math.min(105, newY));
-          }
+          if (x < -5 || x > 105) sx = -sx;
+          if (y < -5 || y > 105) sy = -sy;
 
           return {
             ...item,
-            x: newX,
-            y: newY,
-            speedX: newSpeedX,
-            speedY: newSpeedY,
+            x,
+            y,
+            speedX: sx,
+            speedY: sy,
             rotation: item.rotation + item.rotationSpeed,
           };
         })
       );
-    };
+    }, 50);
 
-    const interval = setInterval(animate, 50);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none bg-background">
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        pointerEvents: 'none',
+        zIndex: 0,
+      }}
+    >
       {items.map((item) => (
         <div
           key={item.id}
-          className="absolute transition-transform duration-75 ease-linear"
           style={{
+            position: 'absolute',
             left: `${item.x}%`,
             top: `${item.y}%`,
             transform: `translate(-50%, -50%) rotate(${item.rotation}deg)`,
@@ -75,7 +74,6 @@ export const FloatingLogos = () => {
         >
           <TechLogo
             name={item.name}
-            className="text-logo"
             style={{ width: item.size, height: item.size }}
           />
         </div>
@@ -83,3 +81,4 @@ export const FloatingLogos = () => {
     </div>
   );
 };
+

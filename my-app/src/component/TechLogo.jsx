@@ -101,13 +101,25 @@ const logos = {
   ),
 };
 
-export const TechLogo = ({ name, className = '', style = {} }) => {
+// export const TechLogo = ({ name, className = '', style = {} }) => {
+//   const logo = logos[name];
+//   if (!logo) return null;
+
+//   return (
+//     <div className={className} style={style}>
+//       {logo}
+//     </div>
+//   );
+// };
+export const TechLogo = ({ name, style = {} }) => {
   const logo = logos[name];
   if (!logo) return null;
 
-  return (
-    <div className={className} style={style}>
-      {logo}
-    </div>
-  );
+  return React.cloneElement(logo, {
+    style: {
+      width: '100%',
+      height: '100%',
+      ...style,
+    },
+  });
 };
