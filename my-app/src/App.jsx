@@ -4,17 +4,22 @@ import { Canvas, extend, useThree, useFrame } from '@react-three/fiber'
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier'
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 import { useTexture } from '@react-three/drei'
+import { FloatingLogos } from './component/FloatingLogos'
 
 
 extend({ MeshLineGeometry, MeshLineMaterial })
 
 export default function App() {
   return (
-    <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
-      <Physics debug interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
-        <Band />
-      </Physics>
-    </Canvas>
+    // <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
+    //   <Physics debug interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
+    //     <Band />
+
+    //   </Physics>
+    // </Canvas>
+    <div className="relative min-h-screen overflow-hidden">
+      <FloatingLogos />
+    </div>
   )
 }
 
