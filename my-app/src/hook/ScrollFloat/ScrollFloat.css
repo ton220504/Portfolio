@@ -1,0 +1,21 @@
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (width >= 64rem) {
+    .scroll-float-text {
+        font-size: 48px;
+    }
+}
+
+.char {
+  display: inline-block;
+}

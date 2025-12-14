@@ -4,9 +4,6 @@ import { FloatingLogos } from '../component/FloatingLogos'
 import TypingLoop from '../hook/TypingLoop';
 
 const Information = () => {
-
-  const text = "Xin chào React!";
-  const letters = text.split("");
   return (
     <>
       <FloatingLogos />
@@ -16,34 +13,18 @@ const Information = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className='text-5xl font-bold'>Hi! My name is Trần Văn Toàn</p>
-
+          <p className="text-5xl font-bold text-gray-600 text-center ">Hi! My name is <TypingLoop text='Trần Văn Toàn' /></p>
         </motion.h1>
-        <TypingLoop text="Frontend Developer" />
 
-        <motion.h1
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.05,
-              },
-            },
-          }}
+        <motion.p
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className='font-bold text-gray-500 text-xl font-serif'
         >
-          {letters.map((char, i) => (
-            <motion.span
-              key={i}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.h1>
+          I'm a SoftWare Developer
+        </motion.p>
+
       </div>
 
     </>
