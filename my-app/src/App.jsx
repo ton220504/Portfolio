@@ -55,12 +55,12 @@ export default function App() {
         <About />
       </section>
 
-      <Dock
+      {/* <Dock
         items={items}
-        panelHeight={68}
-        baseItemSize={50}
-        magnification={70}
-      />
+        //panelHeight={68}
+        // baseItemSize={50}
+        // magnification={70}
+      /> */}
     </div>
   );
 }

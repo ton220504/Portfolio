@@ -26,7 +26,7 @@ const Information = () => {
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-6xl font-bold font-serif text-white"
+          className="md:text-6xl text-4xl font-bold font-serif text-white"
         >
           Welcome to my Portfolio
         </motion.p>
