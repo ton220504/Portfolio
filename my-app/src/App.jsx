@@ -8,6 +8,7 @@ import {
   VscWorkspaceTrusted,
   VscDeviceMobile
 } from 'react-icons/vsc';
+import Skill from './page/Skill';
 
 
 
@@ -53,6 +54,10 @@ export default function App() {
 
       <section id="about">
         <About />
+      </section>
+
+      <section id='skill'>
+        <Skill/>
       </section>
 
       {/* <Dock
