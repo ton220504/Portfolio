@@ -26,10 +26,8 @@ const About = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white overflow-hidden">
 
-      {/* ===== CONTENT ===== */}
       <div className="grid grid-cols-6 gap-6 px-6 pt-16">
 
-        {/* ===== TITLE ===== */}
         <div className="col-span-full md:col-start-2 md:col-span-4 text-center">
           <GradientText
             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
@@ -41,7 +39,6 @@ const About = () => {
           </GradientText>
         </div>
 
-        {/* ===== LEFT TEXT ===== */}
         <div className="col-span-full md:col-span-3">
           <SplitText
             text="Hello, I am a Software Developer passionate about technology,
@@ -68,7 +65,6 @@ const About = () => {
           />
         </div>
 
-        {/* ===== RIGHT CARD ===== */}
         <div className="
       col-span-full md:col-span-3
       flex justify-center items-center
@@ -93,10 +89,8 @@ const About = () => {
 
       </div>
 
-      {/* ===== PUSH LOGO TO BOTTOM ===== */}
       <div className="flex-1" />
 
-      {/* ===== LOGO LOOP ===== */}
       <div className="w-full overflow-hidden bg-black pb-6">
         <LogoLoop
           logos={techLogos}
