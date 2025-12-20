@@ -28,6 +28,7 @@ import vscode from '../../public/images/vscode.png'
 import visualstudio from '../../public/images/visualstudio.png'
 import docker from '../../public/images/docker.png'
 import postman from '../../public/images/postman.png'
+import GradientText from '../hook/GradientText/GradientText'
 
 
 const Skill = () => {
@@ -42,6 +43,14 @@ const Skill = () => {
                         thickness={2}
                         style={{ borderRadius: 16 }}
                     >
+                        <GradientText
+                            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                            animationSpeed={3}
+                            showBorder={false}
+                            className="text-2xl font-serif pt-5"
+                        >
+                            Frontend Skills
+                        </GradientText>
                         <div className="h-80 md:h-96 flex items-center justify-center">
                             <div className='grid grid-cols-3 gap-4'>
                                 <img src={html} alt="HTML5" className="w-15 h-15 mx-2" />
@@ -64,6 +73,14 @@ const Skill = () => {
                         thickness={2}
                         style={{ borderRadius: 16 }}
                     >
+                        <GradientText
+                            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                            animationSpeed={3}
+                            showBorder={false}
+                            className="text-2xl font-serif pt-5"
+                        >
+                            Backend+Database Skills
+                        </GradientText>
                         <div className="h-80 md:h-96 flex items-center justify-center">
                             <div className='grid grid-cols-3 gap-4'>
                                 <img src={nodejs} alt="NodeJS" className="w-15 h-15 mx-2" />
@@ -86,8 +103,15 @@ const Skill = () => {
                         thickness={2}
                         style={{ borderRadius: 16 }}
                     >
+                        <GradientText
+                            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                            animationSpeed={3}
+                            showBorder={false}
+                            className="text-2xl font-serif pt-5"
+                        >
+                            Others Skills
+                        </GradientText>
                         <div className="h-80 md:h-96 flex items-center justify-center">
-                            
                             <div className='grid grid-cols-3 gap-4'>
                                 <img src={git} alt="Git" className="w-15 h-15 mx-2" />
                                 <img src={github} alt="GitHub" className="w-15 h-15 mx-2 bg-white" />

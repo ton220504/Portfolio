@@ -66,11 +66,11 @@ const About = () => {
         </div>
 
         <div className="
-      col-span-full md:col-span-3
-      flex justify-center items-center
-      scale-75 sm:scale-90 md:scale-100
-      transition-transform
-    ">
+          col-span-full md:col-span-3
+          flex justify-center items-center
+          scale-75 sm:scale-90 md:scale-100
+          transition-transform
+        ">
           <TiltedCard
             imageSrc="/images/download.png"
             altText="Trần Văn Toàn"
@@ -94,7 +94,7 @@ const About = () => {
       <div className="w-full overflow-hidden bg-black pb-6">
         <LogoLoop
           logos={techLogos}
-          speed={120}
+          speed={90}
           direction="left"
           logoHeight={48}
           gap={40}

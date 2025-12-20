@@ -9,6 +9,8 @@ import {
   VscDeviceMobile
 } from 'react-icons/vsc';
 import Skill from './page/Skill';
+import Contact from './page/Contact';
+import Repository from './page/Repository';
 
 
 
@@ -58,6 +60,14 @@ export default function App() {
 
       <section id='skill'>
         <Skill/>
+      </section>
+
+      <section id='repo'>
+        <Repository/>
+      </section>
+
+      <section id='contact'>
+        <Contact/>
       </section>
 
       {/* <Dock
