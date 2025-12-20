@@ -41,9 +41,9 @@ const About = () => {
 
         <div className="col-span-full md:col-span-3">
           <SplitText
-            text="Hello, I am a Software Developer passionate about technology,
-        interested in new technologies, and want to apply technology to daily life."
-            className="text-lg md:text-2xl font-serif text-center md:text-left"
+            text="Hello,I am Tran Van Toan, I am a technology enthusiast who loves sports,
+                  interested in new technologies, and want to apply technology to daily life."
+            className="text-lg md:text-2xl font-mono text-center md:text-left"
             delay={30}
             duration={0.25}
             ease="power3.out"
@@ -53,9 +53,9 @@ const About = () => {
           />
 
           <SplitText
-            text="Xin chào, tôi là một lập trình viên đam mê công nghệ,
-        hứng thú với các công nghệ mới, mong muốn đem công nghệ vận dụng vào đời sống hàng ngày."
-            className="text-base md:text-xl mt-4 font-serif text-center md:text-left"
+            text="Xin chào,tôi tên là Trần Văn Toàn, tôi là một người đam mê công nghệ yêu thích thể thao,
+            hứng thú với các công nghệ mới, mong muốn đem công nghệ vận dụng vào đời sống hàng ngày."
+            className="text-base md:text-xl mt-4 font-mono text-center md:text-left"
             delay={30}
             duration={0.25}
             ease="power3.out"

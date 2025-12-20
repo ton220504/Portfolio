@@ -2,9 +2,15 @@ import React from 'react'
 import ChromaGrid from '../hook/ChromaGrid/ChromaGrid';
 import GradientText from '../hook/GradientText/GradientText';
 
+import image_1 from '../../public/images/Screenshot_1.png'
+import image_2 from '../../public/images/Screenshot_2.png'
+import image_3 from '../../public/images/Screenshot_3.png'
+import image_4 from '../../public/images/Screenshot_4.png'
+
+
 const items = [
     {
-        image: 'https://i.pravatar.cc/300?img=8',
+        image: image_2,
         title: 'Fastify-and-ReactJS',
         subtitle: 'ReactJS, Fastify',
         handle: '@ton220504',
@@ -13,7 +19,7 @@ const items = [
         url: 'https://github.com/ton220504/Fastify-and-ReactJS'
     },
     {
-        image: 'https://i.pravatar.cc/300?img=3',
+        image: image_4,
         title: 'BaoCaoLTWe2',
         subtitle: 'ReactJS, Java',
         handle: '@ton220504',
@@ -22,7 +28,7 @@ const items = [
         url: 'https://github.com/ton220504/BaoCaoLTWe2'
     },
     {
-        image: 'https://i.pravatar.cc/300?img=16',
+        image: image_3,
         title: 'DoAn_Web',
         subtitle: 'ReactJS, NodeJS',
         handle: '@ton220504',
@@ -31,7 +37,7 @@ const items = [
         url: 'https://github.com/ton220504/DoAn_Web'
     },
     {
-        image: 'https://i.pravatar.cc/300?img=25',
+        image: image_1,
         title: 'ASP.NET',
         subtitle: 'ASP.NET Core, C#',
         handle: '@ton220504',
@@ -43,7 +49,7 @@ const items = [
 
 const Repository = () => {
     return (
-        <div className='min-h-screen  bg-black text-white'>
+        <div className="min-h-screen bg-black text-white">
             <GradientText
                 colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                 animationSpeed={3}
