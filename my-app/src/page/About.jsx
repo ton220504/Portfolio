@@ -89,9 +89,9 @@ const About = () => {
 
       </div>
 
-      <div className="flex-1" />
+      {/* <div className="flex-1" /> */}
 
-      <div className="w-full overflow-hidden bg-black pb-6">
+      {/* <div className="w-full overflow-hidden bg-black pb-6">
         <LogoLoop
           logos={techLogos}
           speed={90}
@@ -104,7 +104,7 @@ const About = () => {
           fadeOutColor="#000000"
           ariaLabel="Technology partners"
         />
-      </div>
+      </div> */}
 
     </div>
 
