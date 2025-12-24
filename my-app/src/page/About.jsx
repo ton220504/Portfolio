@@ -3,6 +3,7 @@ import SplitText from "../hook/SplitText/SplitText";
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiDocker, SiHtml5, SiCss3, SiJavascript, SiGit, SiGithub, SiMysql, SiNetapp, SiVercel } from 'react-icons/si';
 import LogoLoop from "../hook/LogoLoop/LogoLoop";
 import TiltedCard from "../hook/TiltedCard/TiltedCard";
+import SnowFall from 'react-snowfall';
 
 const About = () => {
 
@@ -25,7 +26,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-black text-white overflow-hidden">
-
+      <SnowFall color="white" snowflakeCount={200}/>
       <div className="grid grid-cols-6 gap-6 px-6 pt-16">
 
         <div className="col-span-full md:col-start-2 md:col-span-4 text-center">

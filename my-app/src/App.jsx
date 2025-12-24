@@ -15,68 +15,33 @@ import Repository from './page/Repository';
 
 
 export default function App() {
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
 
-    el.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+  const scrollToNext = () => {
+    window.scrollTo({
+      top: window.innerHeight + window.pageYOffset,
+      behavior: 'smooth'
     });
-  };
-
-  const items = [
-    {
-      icon: <VscHome size={18} />,
-      label: 'About',
-      onClick: () => scrollToSection('about')
-    },
-    {
-      icon: <VscTasklist size={18} />,
-      label: 'Skill',
-      onClick: () => scrollToSection('skill')
-    },
-    {
-      icon: <VscWorkspaceTrusted size={18} />,
-      label: 'Repository',
-      onClick: () => scrollToSection('repo')
-    },
-    {
-      icon: <VscDeviceMobile size={18} />,
-      label: 'Contact',
-      onClick: () => scrollToSection('contact')
-    },
-  ];
-
+  }
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <section id="home">
+    <>
+      {/* CONTENT */}
+      <div className="relative">
         <Information />
-      </section>
-
-      <section id="about">
         <About />
-      </section>
+        <Skill />
+        <Repository />
+        <Contact />
+      </div>
 
-      <section id='skill'>
-        <Skill/>
-      </section>
-
-      <section id='repo'>
-        <Repository/>
-      </section>
-
-      <section id='contact'>
-        <Contact/>
-      </section>
-
-      {/* <Dock
-        items={items}
-        //panelHeight={68}
-        // baseItemSize={50}
-        // magnification={70}
-      /> */}
-    </div>
+      {/* FIXED BUTTON */}
+      <button
+        onClick={scrollToNext}
+        className="fixed bottom-8 left-1/2 -translate-x-1/2
+                   z-50 animate-bounce text-white"
+      >
+        click!
+      </button>
+    </>
   );
 }
 
