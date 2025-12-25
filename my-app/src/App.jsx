@@ -1,13 +1,6 @@
 import './App.css'
 import Information from './page/Information'
 import About from './page/About'
-import Dock from './hook/Dock/Dock';
-import {
-  VscHome,
-  VscTasklist,
-  VscWorkspaceTrusted,
-  VscDeviceMobile
-} from 'react-icons/vsc';
 import Skill from './page/Skill';
 import Contact from './page/Contact';
 import Repository from './page/Repository';
