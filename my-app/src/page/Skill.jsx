@@ -36,13 +36,14 @@ const Skill = () => {
         <div className='min-h-screen flex items-center justify-center bg-black text-white'>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4'>
                 <div className='w-full md:w-[350px] mx-auto'>
-                    <ElectricBorder
+                    {/* <ElectricBorder
                         color="#7df9ff"
                         speed={1}
                         chaos={0.5}
                         thickness={2}
                         style={{ borderRadius: 16 }}
-                    >
+                    > */}
+                    <div className='border-4 border-sky-500 rounded-xl p-2'>
                         <GradientText
                             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                             animationSpeed={3}
@@ -63,16 +64,18 @@ const Skill = () => {
                                 <img src={bootstrap} alt="Bootstrap" className="w-15 h-15 mx-2" />
                             </div>
                         </div>
-                    </ElectricBorder>
+                    </div>
+                    {/* </ElectricBorder> */}
                 </div>
                 <div className='w-full md:w-[350px] mx-auto'>
-                    <ElectricBorder
+                    {/* <ElectricBorder
                         color="#7df9ff"
                         speed={1}
                         chaos={0.5}
                         thickness={2}
                         style={{ borderRadius: 16 }}
-                    >
+                    > */}
+                    <div className='border-4 border-sky-500 rounded-xl p-2'>
                         <GradientText
                             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                             animationSpeed={3}
@@ -93,16 +96,21 @@ const Skill = () => {
                                 <img src={oracle} alt="Oracle" className="w-15 h-15 mx-2 " />
                             </div>
                         </div>
-                    </ElectricBorder>
+
+                    </div>
+
+                    {/* </ElectricBorder> */}
                 </div>
                 <div className='w-full md:w-[350px] mx-auto'>
-                    <ElectricBorder
+                    {/* <ElectricBorder
                         color="#7df9ff"
                         speed={1}
                         chaos={0.5}
                         thickness={2}
                         style={{ borderRadius: 16 }}
-                    >
+                    > */}
+
+                    <div className='border-4 border-sky-500 rounded-xl p-2'>
                         <GradientText
                             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                             animationSpeed={3}
@@ -127,7 +135,8 @@ const Skill = () => {
                                 <img src={postman} alt="Postman" className="w-15 h-15 mx-2" />
                             </div>
                         </div>
-                    </ElectricBorder>
+                    </div>
+                    {/* </ElectricBorder> */}
                 </div>
 
             </div>

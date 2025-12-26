@@ -4,6 +4,7 @@ import About from './page/About'
 import Skill from './page/Skill';
 import Contact from './page/Contact';
 import Repository from './page/Repository';
+import CareerTimeline from './page/CareerTimeline';
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
       <div className="relative">
         <Information />
         <About />
+        <CareerTimeline/>
         <Skill />
         <Repository />
         <Contact />
