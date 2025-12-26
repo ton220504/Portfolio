@@ -4,6 +4,7 @@ import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiDocker, SiHtml5, S
 import LogoLoop from "../hook/LogoLoop/LogoLoop";
 import TiltedCard from "../hook/TiltedCard/TiltedCard";
 import SnowFall from 'react-snowfall';
+import MyImage from '../../public/images/download.png';
 
 const About = () => {
 
@@ -42,7 +43,7 @@ const About = () => {
 
         <div className="col-span-full md:col-span-3">
           <SplitText
-            text="Hello,I am Tran Van Toan, I am a technology enthusiast who loves sports,
+            text="Hello,I am Tran Van Toan, I graduated from Ho Chi Minh Indusrty and Trade Collage, I am a technology enthusiast who loves sports,
                   interested in new technologies, and want to apply technology to daily life."
             className="text-lg md:text-2xl font-mono text-center md:text-left"
             delay={30}
@@ -54,7 +55,7 @@ const About = () => {
           />
 
           <SplitText
-            text="Xin chào,tôi tên là Trần Văn Toàn, tôi là một người đam mê công nghệ yêu thích thể thao,
+            text="Xin chào,tôi tên là Trần Văn Toàn, đã tốt nghiệp chuyên ngành CNTT tại trường Cao Đẳng Công Thương TP.HCM, tôi là một người đam mê công nghệ yêu thích thể thao,
             hứng thú với các công nghệ mới, mong muốn đem công nghệ vận dụng vào đời sống hàng ngày."
             className="text-base md:text-xl mt-4 font-mono text-center md:text-left"
             delay={30}
@@ -72,7 +73,7 @@ const About = () => {
           scale-75 sm:scale-90 md:scale-100
           transition-transform
         ">
-          <TiltedCard
+          {/* <TiltedCard
             imageSrc="/images/download.png"
             altText="Trần Văn Toàn"
             captionText="Trần Văn Toàn"
@@ -85,7 +86,8 @@ const About = () => {
             showMobileWarning={false}
             showTooltip={true}
             displayOverlayContent={true}
-          />
+          /> */}
+          <img src={MyImage} alt="Trần Văn Toàn" className="w-62 h-96 object-cover" />
         </div>
 
       </div>

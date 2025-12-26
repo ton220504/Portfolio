@@ -1,7 +1,7 @@
 import React from 'react'
 import ElectricBorder from '../hook/ElectricBorder/ElectricBorder';
-import HituImage from '../../public/images/HITU.png';
-import Misumi from '../../public/images/misumi.png';
+import HituImage from '../../public/images/logoHitu.png';
+import Misumi from '../../public/images/misumi1.webp';
 
 
 
@@ -13,21 +13,21 @@ const CareerTimeline = () => {
             year: "06/2025-12/2025",
             title: "Sai Gon Precision Company",
             image: Misumi,
-            desc: "React, Tailwind, UI/UX",
+            desc: "Is a intern at Sai Gon Precision Company, working on maintaining and developing internal management software using ReactJS, NodeJS, ASP.MET, MySQL.",
             side: "left"
         },
         {
             year: "11/2024-02/2025",
             title: "Fullstack Developer",
             image: HituImage,
-            desc: "NodeJS, MongoDB, REST API",
+            desc: "Built a  E-commerce Website using HTML, CSS, Javascript, NodeJS, MySQL and framework ReactJS, Fastify.",
             side: "right"
         },
         {
             year: "09/2022-12/2025",
             title: "Ho Chi Minh Industry and Trade College",
             image: HituImage,
-            desc: "Xây dựng sản phẩm thực tế",
+            desc: "Is a student at Ho Chi Minh Industry and Trade College, majoring in Information Technology.",
             side: "left"
         }
     ];
@@ -61,18 +61,20 @@ const CareerTimeline = () => {
                             <div
                                 className={`w-96 p-5 rounded-xl
                                     ${item.side === "left"
-                                        ? "mr-auto bg-black text-white"
-                                        : "ml-auto bg-black text-white"
+                                        ? "mr-auto bg-white text-black"
+                                        : "ml-auto bg-white text-black"
                                     }`}
                             >
 
-                                <h3 className="font-bold text-lg">{item.title}</h3>
-                                {/* <img
-                                    src={item.image}
-                                    loading="lazy"
-                                    alt="Logo"
-                                    className="mt-2 w-9 h-9 object-contain"
-                                /> */}
+                                <div className='flex items-center justify-between'>
+                                    <h3 className="font-bold text-lg">{item.title}</h3>
+                                    <img
+                                        src={item.image}
+                                        loading="lazy"
+                                        alt="Logo"
+                                        className=" w-20 h-10 object-contain "
+                                    />
+                                </div>
 
                                 <p className="text-sm mt-2">{item.desc}</p>
 
