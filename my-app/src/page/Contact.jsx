@@ -36,12 +36,7 @@ const Contact = () => {
               Contact Me!!!
             </GradientText>
 
-            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
-              <img src="/images/facebook.png" className="w-6 h-6  rounded-full" />
-              <a href="https://www.facebook.com/toan.130256" target="_blank">
-                facebook.com/toan.130256
-              </a>
-            </div>
+
             <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
               <img src="/images/linkedin.png" className="w-6 h-6  rounded-full" />
               <a href="https://www.linkedin.com/in/vantoan220504/" target="_blank">
@@ -49,9 +44,21 @@ const Contact = () => {
               </a>
             </div>
             <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
+              <img src="/images/facebook.png" className="w-6 h-6  rounded-full" />
+              <a href="https://www.facebook.com/toan.130256" target="_blank">
+                facebook.com/toan.130256
+              </a>
+            </div>
+            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
               <img src="/images/github.png" className="w-6 h-6 bg-white rounded-full" />
               <a href="https://github.com/ton220504" target="_blank">
-                https://github.com/ton220504
+                github.com/ton220504
+              </a>
+            </div>
+            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
+              <img src="/images/pdf.png" className="w-6 h-6 bg-white rounded-full" />
+              <a href="/TRAN_VAN_TOAN.pdf" target="_blank">
+                View my Resume
               </a>
             </div>
           </div>

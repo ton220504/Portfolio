@@ -43,7 +43,7 @@ const About = () => {
 
         <div className="col-span-full md:col-span-3">
           <SplitText
-            text="Hello,I am Tran Van Toan, I graduated from Ho Chi Minh Indusrty and Trade Collage, I am a technology enthusiast who loves sports,
+            text="Hello,I am Tran Van Toan, I graduated with a major in Information Technology from Ho Chi Minh Industry and Trade Collage, I am a technology enthusiast who loves sports,
                   interested in new technologies, and want to apply technology to daily life."
             className="text-lg md:text-2xl font-mono text-center md:text-left"
             delay={30}

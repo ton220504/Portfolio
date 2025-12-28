@@ -1,5 +1,3 @@
-import React from 'react'
-import ElectricBorder from '../hook/ElectricBorder/ElectricBorder'
 import html from '../../public/images/html-5.png'
 import css from '../../public/images/css-3.png'
 import js from '../../public/images/js.png'
@@ -8,12 +6,13 @@ import nextjs from '../../public/images/nextjs.png'
 import tailwind from '../../public/images/tailwind.png'
 import bootstrap from '../../public/images/bootstrap.png'
 import ts from '../../public/images/typescript.png'
-import nodejs from '../../public/images/nodejs.png'
+import nodejs from '../../public/images/Node.js.png'
 import express from '../../public/images/express.png'
 import mssql from '../../public/images/sql-server.png'
 import mysql from '../../public/images/mySQL.png'
 import csharp from '../../public/images/c-sharp.png'
 import net from '../../public/images/dotNet-core.png'
+import netcore from '../../public/images/NET.png'
 import fastify from '../../public/images/fastify.png'
 import oracle from '../../public/images/oracle.png'
 import git from '../../public/images/git.png'
@@ -33,7 +32,7 @@ import GradientText from '../hook/GradientText/GradientText'
 
 const Skill = () => {
     return (
-        <div className='min-h-screen flex items-center justify-center bg-black text-white'>
+        <div className='min-[500px] flex items-center justify-center bg-black text-white'>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4'>
                 
                 <div className='w-full md:w-[350px] mx-auto'>
@@ -63,7 +62,7 @@ const Skill = () => {
 
                 <div className='w-full md:w-[350px] mx-auto'>
 
-                    <div className='border-4 border-gray-500 rounded-4xl p-2'>
+                    <div className='border-4 border-gray-500 rounded-4xl lg:rounded-none p-2'>
                         <GradientText
                             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                             animationSpeed={3}
@@ -77,7 +76,8 @@ const Skill = () => {
                                 <img src={nodejs} alt="NodeJS" className="w-15 h-15 mx-2" />
                                 <img src={express} alt="ExpressJS" className="w-15 h-15 mx-2 bg-white" />
                                 <img src={csharp} alt="C#" className="w-15 h-15 mx-2" />
-                                <img src={net} alt=".NET Core" className="w-15 h-15 mx-2" />
+                                <img src={net} alt=".NET" className="w-15 h-15 mx-2" />
+                                <img src={netcore} alt=".NET Core" className="w-15 h-15 mx-2" />
                                 <img src={mssql} alt="MS SQL Server" className="w-15 h-15 mx-2 bg-white" />
                                 <img src={mysql} alt="MySQL" className="w-15 h-15 mx-2" />
                                 <img src={fastify} alt="Fastify" className="w-15 h-15 mx-2 bg-white" />

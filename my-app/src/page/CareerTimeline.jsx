@@ -10,21 +10,21 @@ const CareerTimeline = () => {
     const timeline = [
 
         {
-            year: "06/2025-12/2025",
+            year: "06/2025 - 12/2025",
             title: "Sai Gon Precision Company",
             image: Misumi,
-            desc: "Is a intern at Sai Gon Precision Company, working on maintaining and developing internal management software using ReactJS, NodeJS, ASP.MET, MySQL.",
+            desc: "Is a intern at Sai Gon Precision Company, working on maintaining and developing internal management software using ReactJS, NodeJS, ASP.NET, MySQL.",
             side: "left"
         },
         {
-            year: "11/2024-02/2025",
+            year: "03/2025 - 06/2025",
             title: "Fullstack Developer",
             image: HituImage,
-            desc: "Built a  E-commerce Website using HTML, CSS, Javascript, NodeJS, MySQL and framework ReactJS, Fastify.",
+            desc: "Built a  E-commerce Website using HTML, CSS, JavaScript, NodeJS, MySQL and framework ReactJS, Fastify.",
             side: "right"
         },
         {
-            year: "09/2022-12/2025",
+            year: "09/2022 - 12/2025",
             title: "Ho Chi Minh Industry and Trade College",
             image: HituImage,
             desc: "Is a student at Ho Chi Minh Industry and Trade College, majoring in Information Technology.",
@@ -36,12 +36,8 @@ const CareerTimeline = () => {
 
     return (
         <div className="flex justify-center bg-black ">
-            {/* KHÔNG relative */}
             <div className="w-full max-w-4xl py-10 ">
-
-                {/* CHỈ THẰNG NÀY relative */}
                 <div className="relative">
-
                     {/* Line giữa */}
                     <div className="absolute left-1/2 top-0 h-full w-[2px] bg-sky-500 -translate-x-1/2" />
 
