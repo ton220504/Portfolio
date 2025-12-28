@@ -29,13 +29,13 @@ export default function App() {
       </div>
 
       {/* FIXED BUTTON */}
-      <button
+      {/* <button
         onClick={scrollToNext}
         className="fixed bottom-8 left-1/2 -translate-x-1/2
                    z-50 animate-bounce text-white"
       >
         click!
-      </button>
+      </button> */}
     </>
   );
 }

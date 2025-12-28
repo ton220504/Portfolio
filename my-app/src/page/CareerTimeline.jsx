@@ -36,7 +36,7 @@ const CareerTimeline = () => {
 
     return (
         <div className="flex justify-center bg-black ">
-            <div className="w-full max-w-4xl py-10 ">
+            <div className="w-full max-w-5xl py-10 ">
                 <div className="relative">
                     {/* Line giữa */}
                     <div className="absolute left-1/2 top-0 h-full w-[2px] bg-sky-500 -translate-x-1/2" />
@@ -53,7 +53,6 @@ const CareerTimeline = () => {
                             </div>
 
                             {/* Box */}
-
                             <div
                                 className={`w-96 p-5 rounded-xl
                                     ${item.side === "left"
@@ -61,7 +60,6 @@ const CareerTimeline = () => {
                                         : "ml-auto bg-white text-black"
                                     }`}
                             >
-
                                 <div className='flex items-center justify-between'>
                                     <h3 className="font-bold text-lg">{item.title}</h3>
                                     <img
@@ -71,13 +69,8 @@ const CareerTimeline = () => {
                                         className=" w-20 h-10 object-contain "
                                     />
                                 </div>
-
                                 <p className="text-sm mt-2">{item.desc}</p>
-
-
-
                             </div>
-
                         </div>
                     ))}
                 </div>

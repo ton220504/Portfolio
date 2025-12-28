@@ -32,7 +32,7 @@ import GradientText from '../hook/GradientText/GradientText'
 
 const Skill = () => {
     return (
-        <div className='min-[500px] flex items-center justify-center bg-black text-white'>
+        <div className='min-[500px] flex items-center justify-center bg-black text-white pb-12'>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4'>
                 
                 <div className='w-full md:w-[350px] mx-auto'>
