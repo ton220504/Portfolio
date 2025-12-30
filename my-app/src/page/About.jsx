@@ -6,7 +6,6 @@ import MyImage from '../../public/images/download.png';
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white overflow-hidden">
-      {/* SnowFall background */}
       <SnowFall color="white" snowflakeCount={200}/>
       <div className="grid grid-cols-6 gap-6 px-6 pt-16">
 

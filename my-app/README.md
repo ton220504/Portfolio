@@ -4,7 +4,7 @@
 
 ### 🇻🇳 Tiếng Việt
 Xin chào! 👋  
-Mình là **Trần Văn Toàn**, một **Software Developer** đam mê công nghệ, yêu thích khám phá các công nghệ mới và mong muốn áp dụng công nghệ để giải quyết các vấn đề trong đời sống hằng ngày.
+Mình là **Trần Văn Toàn**,vừa tốt nghiệp chuyên ngành CNTT tại trường **Cao Đẳng Công Thương TP.HCM**, là một **Software Developer** đam mê công nghệ, yêu thích khám phá các công nghệ mới và mong muốn áp dụng công nghệ để giải quyết các vấn đề trong đời sống hằng ngày.
 
 Portfolio này được xây dựng nhằm:
 - Giới thiệu bản thân
@@ -15,7 +15,7 @@ Portfolio này được xây dựng nhằm:
 
 ### 🇬🇧 English
 Hi there! 👋  
-I'm **Tran Van Toan**, a passionate **Software Developer** who loves exploring new technologies and applying them to real-life problems.
+I'm **Tran Van Toan**, I am graduated with a major in **Information Technology** from **Ho Chi Minh Industry and Trade Collage**, a passionate **Software Developer** who loves exploring new technologies and applying them to real-life problems.
 
 This portfolio is built to:
 - Introduce myself
