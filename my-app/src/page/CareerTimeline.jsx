@@ -20,7 +20,7 @@ const CareerTimeline = () => {
             year: "03/2025 - 06/2025",
             title: "Fullstack Developer",
             image: HituImage,
-            desc: "Built a  E-commerce Website using HTML, CSS, JavaScript, NodeJS, MySQL and framework ReactJS, Fastify.",
+            desc: "Built a E-commerce Website using HTML, CSS, JavaScript, NodeJS, MySQL and framework ReactJS, Fastify, integrate online payment via MoMo.",
             side: "right"
         },
         {
