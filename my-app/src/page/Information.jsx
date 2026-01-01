@@ -8,20 +8,10 @@ const Information = () => {
   return (
     <section className="relative h-screen overflow-hidden">
 
-      {/* Background */}
       <Aurora />
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-        {/* <motion.h1
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <p className="text-5xl font-bold text-white">
-            Hi! My name is <TypingLoop text="Trần Văn Toàn" />
-          </p>
-        </motion.h1> */}
+        
         <motion.p
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white px-4">
-      {/* CONTENT */}
       <div className="flex-1 flex items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl justify-items-center items-center">
-          {/* LEFT */}
           <div className="w-full max-w-xl min-h-[120px] flex items-center">
             <TextType
               text={[
@@ -25,7 +23,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* RIGHT */}
           <div className="w-full max-w-xl min-h-[120px] flex flex-col items-center">
             <GradientText
               colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
