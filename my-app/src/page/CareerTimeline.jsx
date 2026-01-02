@@ -10,21 +10,21 @@ const CareerTimeline = () => {
     const timeline = [
 
         {
-            year: "06/2025 - 12/2025",
+            year: "Jun/2025 - Dec/2025",
             title: "Sai Gon Precision Company",
             image: Misumi,
             desc: "Is a intern at Sai Gon Precision Company, working on maintaining and developing internal management software using ReactJS, NodeJS, ASP.NET, MySQL.",
             side: "left"
         },
         {
-            year: "03/2025 - 06/2025",
+            year: "Mar/2025 - Jun/2025",
             title: "Fullstack Developer",
             image: HituImage,
             desc: "Built a E-commerce Website using HTML, CSS, JavaScript, NodeJS, MySQL and framework ReactJS, Fastify, integrate online payment via MoMo.",
             side: "right"
         },
         {
-            year: "09/2022 - 12/2025",
+            year: "Sep/2022 - Dec/2025",
             title: "Ho Chi Minh Industry and Trade College",
             image: HituImage,
             desc: "Is a student at Ho Chi Minh Industry and Trade College, majoring in Information Technology.",

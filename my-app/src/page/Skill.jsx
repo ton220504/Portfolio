@@ -87,7 +87,7 @@ const Skill = () => {
 
                     </div>
                 </div>
-
+0
                 <div className='w-full md:w-[350px] mx-auto'>
                     <div className='border-4 border-gray-500 rounded-4xl lg:rounded-none lg:rounded-tr-4xl lg:rounded-br-4xl p-2'>
                         <GradientText
