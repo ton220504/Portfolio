@@ -1,7 +1,4 @@
-import React from 'react'
 import { motion } from 'framer-motion'
-import { FloatingLogos } from '../component/FloatingLogos'
-import TypingLoop from '../hook/TypingLoop';
 import Aurora from '../hook/BackgroundAurora/Aurora';
 
 const Information = () => {
