@@ -23,16 +23,6 @@ const timeline = [
     technologies: ['ReactJS', 'NodeJS', 'ASP.NET', 'MySQL'],
   },
   {
-    company: 'E-commerce Website',
-    role: 'Fullstack Developer',
-    period: 'Mar 2025 — Jun 2025',
-    image: '/images/logoHitu.png',
-    imageAlt: 'Ho Chi Minh Industry and Trade College logo',
-    description:
-      'Built an e-commerce website with ReactJS, Fastify, NodeJS and MySQL, including MoMo online payment integration.',
-    technologies: ['ReactJS', 'Fastify', 'MySQL', 'MoMo'],
-  },
-  {
     company: 'Ho Chi Minh Industry and Trade College',
     role: 'Information Technology',
     period: 'Sep 2022 — Dec 2025',
