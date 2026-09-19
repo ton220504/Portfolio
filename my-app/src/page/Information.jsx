@@ -1,33 +1,42 @@
-import { motion } from 'framer-motion'
-import Aurora from '../hook/BackgroundAurora/Aurora';
-
-const Information = () => {
+export default function Information() {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="hero-section" id="home" aria-labelledby="hero-title">
+      <div className="hero-aurora" aria-hidden="true" />
+      <div className="hero-overlay" aria-hidden="true" />
+      <div className="hero-inner">
+        <div className="hero-copy">
+          <p className="hero-availability"><span /> Software developer portfolio</p>
+          <h1 id="hero-title">Hi, I'm <span>Tran Van Toan.</span><br />I build for the web.</h1>
+          <p className="hero-description">
+            Turning ideas into thoughtful digital experiences with ReactJS, JavaScript and a love for clean interfaces.
+          </p>
+          <div className="hero-actions">
+            <a className="button-primary" href="#experience">Explore my work <span aria-hidden="true">↗</span></a>
+            <a className="button-secondary" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+          </div>
+          <div className="hero-meta"><span>Based in Vietnam</span><span>ReactJS · JavaScript · Zalo Mini App</span></div>
+        </div>
 
-      <Aurora />
-
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-        
-        <motion.p
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="md:text-6xl text-4xl font-bold font-serif text-white"
-        >
-          Welcome to my Portfolio
-        </motion.p>
-        <motion.p
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-xl font-bold font-serif text-white"
-        >
-          I'm a Software Developer
-        </motion.p>
+        <div className="hero-visual" aria-hidden="true">
+          <div className="hero-orbit hero-orbit-one" />
+          <div className="hero-orbit hero-orbit-two" />
+          <div className="hero-code-window">
+            <div className="hero-window-bar"><i /><i /><i /><span>portfolio.jsx</span></div>
+            <div className="hero-code">
+              <p><span>const</span> developer = {'{'}</p>
+              <p className="indent">name: <strong>'Tran Van Toan'</strong>,</p>
+              <p className="indent">focus: <strong>'Web experiences'</strong>,</p>
+              <p className="indent">stack: [<strong>'ReactJS'</strong>, <strong>'JavaScript'</strong>],</p>
+              <p className="indent">passion: <strong>'Build what matters'</strong></p>
+              <p>{'}'}</p>
+            </div>
+            <div className="hero-window-footer"><span className="hero-pulse" /> Available to collaborate <span>↗</span></div>
+          </div>
+          <div className="hero-float hero-float-top">✦ Creative mind</div>
+          <div className="hero-float hero-float-bottom">&lt;/&gt; Problem solver</div>
+        </div>
       </div>
-
+      <a href="#about" className="hero-scroll">Scroll to explore <span aria-hidden="true">↓</span></a>
     </section>
   );
-};
-export default Information;
+}

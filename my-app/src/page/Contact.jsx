@@ -1,74 +1,32 @@
-import React from 'react'
-import TextType from '../hook/TextType/TextType'
-import GradientText from '../hook/GradientText/GradientText'
-import { Link } from 'react-router-dom';
+const socialLinks = [
+  { label: 'LinkedIn', detail: 'Connect professionally', image: '/images/linkedin.png', url: 'https://www.linkedin.com/in/vantoan220504/' },
+  { label: 'Facebook', detail: 'Say hello', image: '/images/facebook.png', url: 'https://www.facebook.com/toan.130256' },
+  { label: 'GitHub', detail: 'Explore my code', image: '/images/github.png', url: 'https://github.com/ton220504' },
+  { label: 'Résumé', detail: 'View my experience', image: '/images/pdf.png', url: '/TRAN_VAN_TOAN.pdf' },
+];
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white px-4">
-      <div className="flex-1 flex items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl justify-items-center items-center">
-          <div className="w-full max-w-xl min-h-[120px] flex items-center">
-            <TextType
-              text={[
-                "Thanks you! for watching my Portfolio.",
-                "I'm looking forward to connecting with you.",
-                "Happy coding!"
-              ]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor
-              cursorCharacter="|"
-              className="text-4xl md:text-5xl font-mono"
-            />
+    <section className="contact-section" id="contact" aria-labelledby="contact-title">
+      <div className="section-shell">
+        <div className="contact-panel">
+          <div className="contact-copy">
+            <p className="section-eyebrow"><span /> 04 / CONTACT</p>
+            <h2 id="contact-title">Have something in mind?<br /><span>Let's build it.</span></h2>
+            <p>Thanks for exploring my portfolio. I'd love to hear about your ideas, opportunities or just connect with another builder.</p>
           </div>
-
-          <div className="w-full max-w-xl min-h-[120px] flex flex-col items-center">
-            <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-              animationSpeed={3}
-              showBorder={false}
-              className="text-4xl md:text-5xl font-serif"
-            >
-              Contact Me!!!
-            </GradientText>
-
-
-            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
-              <img src="/images/linkedin.png" className="w-6 h-6  rounded-full" />
-              <a href="https://www.linkedin.com/in/vantoan220504/" target="_blank">
-                linkedin.com/in/vantoan220504
+          <div className="contact-links">
+            {socialLinks.map((link) => (
+              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer">
+                <span className="contact-icon"><img src={link.image} alt="" loading="lazy" /></span>
+                <span><strong>{link.label}</strong><small>{link.detail}</small></span>
+                <span className="contact-arrow" aria-hidden="true">↗</span>
               </a>
-            </div>
-            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
-              <img src="/images/facebook.png" className="w-6 h-6  rounded-full" />
-              <a href="https://www.facebook.com/toan.130256" target="_blank">
-                facebook.com/toan.130256
-              </a>
-            </div>
-            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
-              <img src="/images/github.png" className="w-6 h-6 bg-white rounded-full" />
-              <a href="https://github.com/ton220504" target="_blank">
-                github.com/ton220504
-              </a>
-            </div>
-            <div className="rounded-full border-4 border-sky-500 p-3 my-2 flex items-center gap-2">
-              <img src="/images/pdf.png" className="w-6 h-6 bg-white rounded-full" />
-              <a href="/TRAN_VAN_TOAN.pdf" target="_blank">
-                View my Resume
-              </a>
-            </div>
+            ))}
           </div>
         </div>
+        <footer className="site-footer"><span>© {new Date().getFullYear()} Tran Van Toan</span><a href="#home">Back to top ↑</a></footer>
       </div>
-
-      {/* FOOTER */}
-      <div className="text-center text-sm opacity-70 pb-4">
-        © 2025 TranVanToan
-      </div>
-    </div>
-
+    </section>
   );
-};
-
-export default Contact;
+}

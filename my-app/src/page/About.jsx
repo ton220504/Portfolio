@@ -1,66 +1,29 @@
-import GradientText from "../hook/GradientText/GradientText";
-import SplitText from "../hook/SplitText/SplitText";
-import SnowFall from 'react-snowfall';
-import MyImage from '../../public/images/download.png';
-
-const About = () => {
+export default function About() {
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white overflow-hidden">
-      <SnowFall color="white" snowflakeCount={200}/>
-      <div className="grid grid-cols-6 gap-6 px-6 pt-16">
-
-        <div className="col-span-full md:col-start-2 md:col-span-4 text-center">
-          <GradientText
-            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-            animationSpeed={3}
-            showBorder={false}
-            className="text-5xl md:text-6xl font-serif"
-          >
-            Software Developer
-          </GradientText>
-        </div>
-
-        <div className="col-span-full md:col-span-3">
-          <SplitText
-            text="Hello!,I am Tran Van Toan, I graduated with a major in Information Technology from Ho Chi Minh Industry and Trade Collage, I am a technology enthusiast who loves sports,
-                  interested in new technologies, and want to apply technology to daily life."
-            className="text-lg md:text-2xl font-mono text-center md:text-left"
-            delay={30}
-            duration={0.25}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-          />
-
-          <SplitText
-            text="Xin chào!,tôi tên là Trần Văn Toàn, đã tốt nghiệp chuyên ngành CNTT tại trường Cao Đẳng Công Thương TP.HCM, tôi là một người đam mê công nghệ yêu thích thể thao,
-            hứng thú với các công nghệ mới, mong muốn đem công nghệ vận dụng vào đời sống hàng ngày."
-            className="text-base md:text-xl mt-4 font-mono text-center md:text-left"
-            delay={30}
-            duration={0.25}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-          />
-        </div>
-
-        <div className="
-          col-span-full md:col-span-3
-          flex justify-center items-center
-          scale-75 sm:scale-90 md:scale-100
-          transition-transform
-        ">
-          <img src={MyImage} alt="Trần Văn Toàn" className="w-62 h-96 object-cover" />
-        </div>
-
+    <section className="about-section section-shell" id="about" aria-labelledby="about-title">
+      <div className="about-portrait">
+        <div className="portrait-glow" aria-hidden="true" />
+        <img src="/images/download.png" alt="Portrait of Tran Van Toan" loading="lazy" />
+        <div className="portrait-caption"><span>01 / 02</span><span>MEET THE DEVELOPER</span></div>
       </div>
-
-
-    </div>
-
+      <div className="about-copy">
+        <p className="section-eyebrow"><span /> ABOUT ME</p>
+        <h2 id="about-title">Curiosity in every line of code<span>.</span></h2>
+        <p className="about-lead">
+          I'm Tran Van Toan, a software developer and Information Technology graduate from Ho Chi Minh Industry and Trade College.
+        </p>
+        <p>
+          I enjoy exploring new technologies and creating practical digital experiences for everyday life. From responsive websites to Zalo Mini Apps, I care about how a product feels as much as how it works.
+        </p>
+        <p lang="vi">
+          Xin chào! Mình là Trần Văn Toàn, yêu thích khám phá công nghệ mới và tạo ra những sản phẩm số hữu ích trong cuộc sống hằng ngày.
+        </p>
+        <div className="about-highlights">
+          <div><strong>Frontend</strong><span>Interfaces that feel intuitive</span></div>
+          <div><strong>Fullstack</strong><span>Ideas built end to end</span></div>
+        </div>
+        <a href="/TRAN_VAN_TOAN.pdf" target="_blank" rel="noopener noreferrer" className="about-resume">View my résumé <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   );
 }
-
-export default About;

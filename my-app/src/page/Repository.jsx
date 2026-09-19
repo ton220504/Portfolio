@@ -1,74 +1,35 @@
-import React from 'react'
-import ChromaGrid from '../hook/ChromaGrid/ChromaGrid';
-import GradientText from '../hook/GradientText/GradientText';
-
-import image_1 from '../../public/images/Screenshot_1.png'
-import image_2 from '../../public/images/Screenshot_2.png'
-import image_3 from '../../public/images/Screenshot_3.png'
-import image_4 from '../../public/images/Screenshot_4.png'
-
-
-const items = [
-    {
-        image: image_2,
-        title: 'Fastify-and-ReactJS',
-        subtitle: 'ReactJS, Fastify',
-        handle: '@ton220504',
-        borderColor: '#4F46E5',
-        gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-        url: 'https://github.com/ton220504/Fastify-and-ReactJS'
-    },
-    {
-        image: image_4,
-        title: 'BaoCaoLTWe2',
-        subtitle: 'ReactJS, Java',
-        handle: '@ton220504',
-        borderColor: '#F59E0B',
-        gradient: 'linear-gradient(165deg, #F59E0B, #000)',
-        url: 'https://github.com/ton220504/BaoCaoLTWe2'
-    },
-    {
-        image: image_3,
-        title: 'DoAn_Web',
-        subtitle: 'ReactJS, NodeJS',
-        handle: '@ton220504',
-        borderColor: '#EF4444',
-        gradient: 'linear-gradient(195deg, #EF4444, #000)',
-        url: 'https://github.com/ton220504/DoAn_Web'
-    },
-    {
-        image: image_1,
-        title: 'ASP.NET',
-        subtitle: 'ASP.NET Core, C#',
-        handle: '@ton220504',
-        borderColor: '#8B5CF6',
-        gradient: 'linear-gradient(225deg, #8B5CF6, #000)',
-        url: 'https://github.com/ton220504/ASP.NET'
-    }
+const projects = [
+  { image: '/images/Screenshot_2.png', title: 'Fastify-and-ReactJS', stack: 'ReactJS · Fastify', url: 'https://github.com/ton220504/Fastify-and-ReactJS' },
+  { image: '/images/Screenshot_4.png', title: 'BaoCaoLTWe2', stack: 'ReactJS · Java', url: 'https://github.com/ton220504/BaoCaoLTWe2' },
+  { image: '/images/Screenshot_3.png', title: 'DoAn_Web', stack: 'ReactJS · NodeJS', url: 'https://github.com/ton220504/DoAn_Web' },
+  { image: '/images/Screenshot_1.png', title: 'ASP.NET', stack: 'ASP.NET Core · C#', url: 'https://github.com/ton220504/ASP.NET' },
 ];
 
-const Repository = () => {
-    return (
-        <div className="min-h-screen bg-black text-white">
-            <GradientText
-                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                animationSpeed={3}
-                showBorder={false}
-                className="text-4xl flex justify-center items-center font-serif"
-            >
-                My Repository
-            </GradientText>
-            <div >
-                <ChromaGrid
-                    items={items}
-                    radius={300}
-                    damping={0.45}
-                    fadeOut={0.6}
-                    ease="power3.out"
-                />
-            </div>
+export default function Repository() {
+  return (
+    <section className="projects-section" id="projects" aria-labelledby="projects-title">
+      <div className="section-shell">
+        <div className="section-heading projects-heading">
+          <div>
+            <p className="section-eyebrow"><span /> 03 / SELECTED WORK</p>
+            <h2 id="projects-title">Projects in <span>practice.</span></h2>
+          </div>
+          <a href="https://github.com/ton220504" target="_blank" rel="noopener noreferrer" className="text-link">More on GitHub <span aria-hidden="true">↗</span></a>
         </div>
-    )
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <a className="project-card" key={project.title} href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>
+              <div className="project-image"><img src={project.image} alt={`Screenshot of ${project.title}`} loading="lazy" /></div>
+              <div className="project-details">
+                <span className="project-index">{String(index + 1).padStart(2, '0')} / PROJECT</span>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+                <h3>{project.title}</h3>
+                <p>{project.stack}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Repository

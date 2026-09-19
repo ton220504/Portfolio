@@ -1,84 +1,94 @@
-import React from 'react'
-import ElectricBorder from '../hook/ElectricBorder/ElectricBorder';
-import HituImage from '../../public/images/logoHitu.png';
-import Misumi from '../../public/images/misumi1.webp';
+import './CareerTimeline.css';
 
+const timeline = [
+  {
+    company: 'Công ty Cổ phần TitKul',
+    role: 'Zalo Mini App Development',
+    period: 'Zalo Mini App',
+    image: '/images/titkul.png',
+    imageAlt: 'Logo Công ty Cổ phần TitKul',
+    description:
+      'Tham gia lập trình Zalo Mini App, xây dựng giao diện và các chức năng tương tác bằng ReactJS và JavaScript.',
+    technologies: ['Zalo Mini App', 'ReactJS', 'JavaScript'],
+    featured: true,
+  },
+  {
+    company: 'Sai Gon Precision Company',
+    role: 'Software Developer Intern',
+    period: 'Jun 2025 — Dec 2025',
+    image: '/images/misumi1.webp',
+    imageAlt: 'Sai Gon Precision Company',
+    description:
+      'Maintained and developed internal management software using ReactJS, NodeJS, ASP.NET and MySQL.',
+    technologies: ['ReactJS', 'NodeJS', 'ASP.NET', 'MySQL'],
+  },
+  {
+    company: 'E-commerce Website',
+    role: 'Fullstack Developer',
+    period: 'Mar 2025 — Jun 2025',
+    image: '/images/logoHitu.png',
+    imageAlt: 'Ho Chi Minh Industry and Trade College logo',
+    description:
+      'Built an e-commerce website with ReactJS, Fastify, NodeJS and MySQL, including MoMo online payment integration.',
+    technologies: ['ReactJS', 'Fastify', 'MySQL', 'MoMo'],
+  },
+  {
+    company: 'Ho Chi Minh Industry and Trade College',
+    role: 'Information Technology',
+    period: 'Sep 2022 — Dec 2025',
+    image: '/images/logoHitu.png',
+    imageAlt: 'Ho Chi Minh Industry and Trade College logo',
+    description: 'Studied Information Technology and built a foundation in software development.',
+    technologies: ['Education', 'Software Development'],
+  },
+];
 
-
-const CareerTimeline = () => {
-
-    const timeline = [
-
-        {
-            year: "Jun/2025 - Dec/2025",
-            title: "Sai Gon Precision Company",
-            image: Misumi,
-            desc: "Is a intern at Sai Gon Precision Company, working on maintaining and developing internal management software using ReactJS, NodeJS, ASP.NET, MySQL.",
-            side: "left"
-        },
-        {
-            year: "Mar/2025 - Jun/2025",
-            title: "Fullstack Developer",
-            image: HituImage,
-            desc: "Built a E-commerce Website using HTML, CSS, JavaScript, NodeJS, MySQL and framework ReactJS, Fastify, integrate online payment via MoMo.",
-            side: "right"
-        },
-        {
-            year: "Sep/2022 - Dec/2025",
-            title: "Ho Chi Minh Industry and Trade College",
-            image: HituImage,
-            desc: "Is a student at Ho Chi Minh Industry and Trade College, majoring in Information Technology.",
-            side: "left"
-        }
-    ];
-
-
-
-    return (
-        <div className="flex justify-center bg-black ">
-            <div className="w-full max-w-5xl py-10 ">
-                <div className="relative">
-                    {/* Line giữa */}
-                    <div className="absolute left-1/2 top-0 h-full w-[2px] bg-sky-500 -translate-x-1/2" />
-
-                    {timeline.map((item, i) => (
-                        <div key={i} className="relative mb-20">
-
-                            {/* Dot */}
-                            <div className="absolute left-1/2 top-2 w-5 h-5 bg-sky-400 rounded-full -translate-x-1/2 z-10" />
-
-                            {/* Year */}
-                            <div className="absolute left-1/2 -top-10 text-white font-bold -translate-x-1/2">
-                                {item.year}
-                            </div>
-
-                            {/* Box */}
-                            <div
-                                className={`w-96 p-5 rounded-xl
-                                    ${item.side === "left"
-                                        ? "mr-auto bg-white text-black"
-                                        : "ml-auto bg-white text-black"
-                                    }`}
-                            >
-                                <div className='flex items-center justify-between'>
-                                    <h3 className="font-bold text-lg">{item.title}</h3>
-                                    <img
-                                        src={item.image}
-                                        loading="lazy"
-                                        alt="Logo"
-                                        className=" w-20 h-10 object-contain "
-                                    />
-                                </div>
-                                <p className="text-sm mt-2">{item.desc}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-            </div>
+export default function CareerTimeline() {
+  return (
+    <section className="career-section" id="experience" aria-labelledby="career-title">
+      <div className="career-glow" aria-hidden="true" />
+      <div className="career-container">
+        <div className="career-heading">
+          <div>
+            <p className="section-eyebrow"><span /> 01 / EXPERIENCE</p>
+            <h2 id="career-title">The journey <span>so far.</span></h2>
+          </div>
+          <p className="career-intro">
+            A look at the places, projects and technologies shaping the way I build software.
+          </p>
         </div>
 
-    );
+        <ol className="career-list">
+          {timeline.map((item, index) => (
+            <li className="career-item" key={`${item.company}-${item.period}`}>
+              <div className="career-marker" aria-hidden="true">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+              </div>
+              <article className={`career-card${item.featured ? ' career-card-featured' : ''}`}>
+                <div className="career-card-top">
+                  <span className="career-period">{item.period}</span>
+                  {item.featured && <span className="career-featured-label">Featured experience</span>}
+                </div>
+                <div className="career-card-main">
+                  <div className="career-card-copy">
+                    <p className="career-role">{item.role}</p>
+                    <h3>{item.company}</h3>
+                    <p className="career-description">{item.description}</p>
+                  </div>
+                  <div className="career-logo">
+                    <img src={item.image} alt={item.imageAlt} loading="lazy" />
+                  </div>
+                </div>
+                <ul className="career-tags" aria-label="Technologies and focus">
+                  {item.technologies.map((technology) => (
+                    <li key={technology}>{technology}</li>
+                  ))}
+                </ul>
+              </article>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
 }
-
-export default CareerTimeline
