@@ -2,13 +2,13 @@ import './CareerTimeline.css';
 
 const timeline = [
   {
-    company: 'Công ty Cổ phần TitKul',
+    company: 'TitKul Joint Stock Company',
     role: 'Zalo Mini App Development',
-    period: 'Zalo Mini App',
+    period: 'Apr 2026 - Present',
     image: '/images/titkul.png',
-    imageAlt: 'Logo Công ty Cổ phần TitKul',
+    imageAlt: 'TitKul company logo',
     description:
-      'Tham gia lập trình Zalo Mini App, xây dựng giao diện và các chức năng tương tác bằng ReactJS và JavaScript.',
+      'Developed and maintained Zalo Mini Apps for the company, focusing on user experience and performance optimization.',
     technologies: ['Zalo Mini App', 'ReactJS', 'JavaScript'],
     featured: true,
   },

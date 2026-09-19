@@ -3,7 +3,7 @@ export default function About() {
     <section className="about-section section-shell" id="about" aria-labelledby="about-title">
       <div className="about-portrait">
         <div className="portrait-glow" aria-hidden="true" />
-        <img src="/images/download.png" alt="Portrait of Tran Van Toan" loading="lazy" />
+        <img src="/images/avatar.jpg" alt="Portrait of Tran Van Toan" loading="lazy" />
         <div className="portrait-caption"><span>01 / 02</span><span>MEET THE DEVELOPER</span></div>
       </div>
       <div className="about-copy">

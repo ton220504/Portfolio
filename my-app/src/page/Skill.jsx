@@ -5,18 +5,18 @@ const skillGroups = [
     description: 'Interfaces that work beautifully across screens.',
     skills: [
       ['HTML5', 'html-5.png'], ['CSS3', 'css-3.png'], ['JavaScript', 'js.png'],
-      ['TypeScript', 'typescript.png'], ['ReactJS', 'reactjs.png'], ['NextJS', 'nextjs.png'],
+      ['TypeScript', 'typescript.png'], ['ReactJS', 'reactjs.png'],
       ['Tailwind CSS', 'tailwind.png'], ['Bootstrap', 'bootstrap.png'],
     ],
   },
   {
     number: '02',
-    title: 'Backend & data',
+    title: 'Backend & Databases',
     description: 'Reliable logic and data behind the experience.',
     skills: [
-      ['NodeJS', 'Node.js.png'], ['ExpressJS', 'express.png'], ['C#', 'c-sharp.png'],
-      ['.NET', 'dotNet-core.png'], ['.NET Core', 'NET.png'], ['SQL Server', 'sql-server.png'],
-      ['MySQL', 'mySQL.png'], ['Fastify', 'fastify.png'], ['Oracle', 'oracle.png'],
+      ['NodeJS', 'Node.js.png'], ['C#', 'c-sharp.png'],
+      ['.NET', 'dotNet-core.png'], ['SQL Server', 'sql-server.png'],
+      ['MySQL', 'mySQL.png'],['PostgreSQL', 'postgresql.png']
     ],
   },
   {
@@ -24,9 +24,9 @@ const skillGroups = [
     title: 'Tools & workflow',
     description: 'The toolkit that helps ideas become real products.',
     skills: [
-      ['Git', 'git.png'], ['GitHub', 'github.png'], ['GitLab', 'gitlab.png'],
+      ['Git', 'git.png'], ['GitHub', 'github.png'],
       ['Material UI', 'material-UI.png'], ['Vercel', 'vercel.png'], ['Stack Overflow', 'stack-overflow.png'],
-      ['NPM', 'npm.png'], ['NGINX', 'NGINX.png'], ['VS Code', 'vscode.png'],
+      ['NPM', 'npm.png'], ['VS Code', 'vscode.png'],
       ['Visual Studio', 'visualstudio.png'], ['Docker', 'docker.png'], ['Postman', 'postman.png'],
     ],
   },
