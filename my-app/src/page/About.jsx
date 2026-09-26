@@ -22,7 +22,7 @@ export default function About() {
           <div><strong>Frontend</strong><span>Interfaces that feel intuitive</span></div>
           <div><strong>Fullstack</strong><span>Ideas built end to end</span></div>
         </div>
-        <a href="/TRAN_VAN_TOAN.pdf" target="_blank" rel="noopener noreferrer" className="about-resume">View my résumé <span aria-hidden="true">↗</span></a>
+        <a href="/SOFTWARE_DEVELOPER_TRAN_VAN_TOAN.pdf" target="_blank" rel="noopener noreferrer" className="about-resume">View my résumé <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   );

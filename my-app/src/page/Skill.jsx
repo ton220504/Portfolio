@@ -14,7 +14,6 @@ const skillGroups = [
     title: 'Backend & Databases',
     description: 'Reliable logic and data behind the experience.',
     skills: [
-      ['NodeJS', 'Node.js.png'], ['C#', 'c-sharp.png'],
       ['.NET', 'dotNet-core.png'], ['SQL Server', 'sql-server.png'],
       ['MySQL', 'mySQL.png'],['PostgreSQL', 'postgresql.png']
     ],

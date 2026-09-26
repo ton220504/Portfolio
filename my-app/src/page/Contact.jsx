@@ -2,7 +2,7 @@ const socialLinks = [
   { label: 'LinkedIn', detail: 'Connect professionally', image: '/images/linkedin.png', url: 'https://www.linkedin.com/in/vantoan220504/' },
   { label: 'Facebook', detail: 'Say hello', image: '/images/facebook.png', url: 'https://www.facebook.com/toan.130256' },
   { label: 'GitHub', detail: 'Explore my code', image: '/images/github.png', url: 'https://github.com/ton220504' },
-  { label: 'Résumé', detail: 'View my experience', image: '/images/pdf.png', url: '/TRAN_VAN_TOAN.pdf' },
+  { label: 'Résumé', detail: 'View my experience', image: '/images/pdf.png', url: '/SOFTWARE_DEVELOPER_TRAN_VAN_TOAN.pdf' },
 ];
 
 export default function Contact() {

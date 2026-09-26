@@ -102,14 +102,27 @@ section { scroll-margin-top: 2rem; }
 .text-link { display: inline-flex; align-items: center; gap: .8rem; flex-shrink: 0; margin-bottom: 1rem; padding-bottom: .3rem; border-bottom: 1px solid #88d7e7; color: #b5e6ef; font-size: .86rem; font-weight: 700; text-decoration: none; }
 .text-link:hover { color: #fff; }
 .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.3rem; }
+.project-card-link { display: block; min-width: 0; color: inherit; text-decoration: none; }
 .project-card { min-width: 0; overflow: hidden; border: 1px solid #7399c047; border-radius: 21px; color: #fff; background: #15243a; text-decoration: none; transition: transform .25s, border-color .25s, box-shadow .25s; }
-.project-card:hover, .project-card:focus-visible { transform: translateY(-5px); border-color: #8ed0f8; box-shadow: 0 22px 50px #0005; }
+.project-card-link:hover .project-card, .project-card-link:focus-visible .project-card, .project-card:hover, .project-card:focus-visible { transform: translateY(-5px); border-color: #8ed0f8; box-shadow: 0 22px 50px #0005; }
 .project-image { height: clamp(180px, 24vw, 270px); overflow: hidden; background: #253550; }
 .project-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .35s; }
-.project-card:hover img { transform: scale(1.04); }
+.project-card-link:hover img, .project-card:hover .project-single-image img { transform: scale(1.04); }
+.project-collage { position: relative; display: grid; grid-template-columns: repeat(var(--image-count), minmax(0, 1fr)); grid-template-rows: 1fr; height: clamp(430px, 38vw, 620px); gap: 3px; cursor: pointer; background: #0b1525; }
+.project-collage img { min-width: 0; min-height: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; background: #f7f9fc; }
+.project-qr-trigger:focus-visible { outline: 2px solid #91ddf8; outline-offset: -4px; }
+.project-qr-overlay { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 1rem; opacity: 0; pointer-events: none; background: #06101dcc; backdrop-filter: blur(7px); transition: opacity .25s ease; }
+.project-card-qr:hover .project-qr-overlay, .project-qr-overlay.is-visible { opacity: 1; }
+.project-qr-card { display: flex; flex-direction: column; align-items: center; gap: .7rem; width: min(100%, 220px); padding: .8rem; border: 1px solid #c3ebff88; border-radius: 15px; background: #f9fcff; box-shadow: 0 16px 35px #0008; transform: translateY(8px); transition: transform .25s ease; }
+.project-card-qr:hover .project-qr-card, .project-qr-overlay.is-visible .project-qr-card { transform: translateY(0); }
+.project-qr-crop { display: block; width: 145px; height: 145px; overflow: hidden; border-radius: 9px; background: #fff; }
+.project-qr-crop img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 51%; transform: scale(1.6); }
+.project-qr-card > span:last-child { color: #13243a; font-size: .72rem; font-weight: 800; line-height: 1.35; text-align: center; }
+.project-qr-badge { position: absolute; z-index: 3; top: .8rem; right: .8rem; padding: .35rem .55rem; border: 1px solid #d4f2ff6e; border-radius: 999px; color: #e4f8ff; background: #07182bc4; font-size: .6rem; font-weight: 800; letter-spacing: .1em; pointer-events: none; }
 .project-details { display: grid; grid-template-columns: 1fr auto; padding: 1.3rem 1.5rem 1.5rem; }
 .project-index { color: #88bfd9; font-size: .68rem; font-weight: 800; letter-spacing: .16em; }
 .project-arrow { grid-column: 2; grid-row: span 3; align-self: center; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #acd7ef57; border-radius: 50%; font-size: 1.1rem; }
+.project-qr-hint { grid-column: 2; align-self: center; color: #8ce5dc; font-size: .64rem; font-weight: 700; text-align: right; }
 .project-details h3 { margin: .55rem 0 .18rem; font-size: 1.25rem; letter-spacing: -.025em; }
 .project-details p { margin: 0; color: #9daec6; font-size: .83rem; }
 
@@ -160,6 +173,7 @@ section { scroll-margin-top: 2rem; }
   .skill-card:last-child .skill-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skill-card-heading { min-height: 0; margin-bottom: 1.5rem; }
   .project-image { height: 240px; }
+  .project-collage { height: 500px; }
   .projects-heading { align-items: flex-start; flex-direction: column; }
   .contact-panel { gap: 1rem; }
 }
@@ -178,6 +192,10 @@ section { scroll-margin-top: 2rem; }
   .about-portrait img { max-height: 310px; }
   .about-highlights { gap: .7rem; }
   .project-image { height: 190px; }
+  .project-collage { height: 420px; }
+  .project-qr-overlay { padding: .75rem; }
+  .project-qr-card { width: min(100%, 205px); }
+  .project-qr-crop { width: 132px; height: 132px; }
   .site-footer { flex-wrap: wrap; }
 }
 
